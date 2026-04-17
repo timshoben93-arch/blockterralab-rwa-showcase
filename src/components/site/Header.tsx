@@ -1,29 +1,34 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { SERVICES } from "@/data/services";
+import logo from "@/assets/logo.png";
 
 const Logo = () => (
-  <a href="#" className="flex items-center gap-2.5 group">
-    <div className="relative h-9 w-9 rounded-xl bg-gradient-primary shadow-soft flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      <svg viewBox="0 0 24 24" className="relative h-5 w-5 text-primary-foreground" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M3 7l9-4 9 4-9 4-9-4z" />
-        <path d="M3 12l9 4 9-4" />
-        <path d="M3 17l9 4 9-4" />
-      </svg>
-    </div>
+  <Link to="/" className="flex items-center gap-2.5 group">
+    <img
+      src={logo}
+      alt="BlockTerraLab logo"
+      className="h-10 w-10 rounded-xl shadow-soft object-contain"
+    />
     <div className="leading-tight">
       <div className="font-display font-bold tracking-tight text-foreground">BlockTerraLab</div>
       <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">RWA · Blockchain Lab</div>
     </div>
-  </a>
+  </Link>
 );
 
 const NAV = [
-  { label: "Solutions", href: "#solutions" },
-  { label: "RWA", href: "#rwa" },
-  { label: "Industries", href: "#industries" },
-  { label: "About", href: "#about" },
-  { label: "Insights", href: "#insights" },
+  { label: "RWA", href: "/#rwa" },
+  { label: "Industries", href: "/#industries" },
+  { label: "About", href: "/#about" },
+  { label: "Insights", href: "/#insights" },
 ];
 
 export const Header = () => {
@@ -32,6 +37,33 @@ export const Header = () => {
       <div className="container flex h-20 items-center justify-between">
         <Logo />
         <nav className="hidden lg:flex items-center gap-8">
+          <DropdownMenu>
+            <DropdownMenuTrigger className="inline-flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors outline-none">
+              Services
+              <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-72">
+              {SERVICES.map((s) => {
+                const Icon = s.icon;
+                return (
+                  <DropdownMenuItem key={s.slug} asChild>
+                    <Link
+                      to={`/services/${s.slug}`}
+                      className="flex items-start gap-3 cursor-pointer py-2"
+                    >
+                      <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <span className="flex flex-col">
+                        <span className="text-sm font-medium text-foreground">{s.short}</span>
+                        <span className="text-xs text-muted-foreground line-clamp-1">{s.tagline}</span>
+                      </span>
+                    </Link>
+                  </DropdownMenuItem>
+                );
+              })}
+            </DropdownMenuContent>
+          </DropdownMenu>
           {NAV.map((item) => (
             <a
               key={item.label}
