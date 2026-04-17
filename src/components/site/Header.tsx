@@ -8,6 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { SERVICES } from "@/data/services";
+import { TALENTS } from "@/data/talents";
 import logo from "@/assets/logo.png";
 
 const Logo = () => (
@@ -57,6 +58,33 @@ export const Header = () => {
                       <span className="flex flex-col">
                         <span className="text-sm font-medium text-foreground">{s.short}</span>
                         <span className="text-xs text-muted-foreground line-clamp-1">{s.tagline}</span>
+                      </span>
+                    </Link>
+                  </DropdownMenuItem>
+                );
+              })}
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="inline-flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors outline-none">
+              Talent Recruitment
+              <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-72 max-h-[70vh] overflow-y-auto">
+              {TALENTS.map((t) => {
+                const Icon = t.icon;
+                return (
+                  <DropdownMenuItem key={t.slug} asChild>
+                    <Link
+                      to={`/talents/${t.slug}`}
+                      className="flex items-start gap-3 cursor-pointer py-2"
+                    >
+                      <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                        <Icon className="h-4 w-4" />
+                      </span>
+                      <span className="flex flex-col">
+                        <span className="text-sm font-medium text-foreground">{t.short}</span>
+                        <span className="text-xs text-muted-foreground line-clamp-1">{t.tagline}</span>
                       </span>
                     </Link>
                   </DropdownMenuItem>
