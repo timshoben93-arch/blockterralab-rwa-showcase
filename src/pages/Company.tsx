@@ -1,9 +1,16 @@
-import { MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail, Phone, Linkedin, Twitter } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { TEAM, COMPANY_LOCATION } from "@/data/company";
+
+const Eyebrow = ({ children }: { children: React.ReactNode }) => (
+  <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+    <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+    {children}
+  </span>
+);
 
 const Company = () => {
   const { lat, lon, address, name } = COMPANY_LOCATION;
@@ -12,89 +19,176 @@ const Company = () => {
   const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${lat}%2C${lon}`;
 
   return (
-    <div className="min-h-screen bg-background font-sans">
+    <div className="min-h-screen bg-background font-sans antialiased text-foreground">
       <Header />
       <main>
         {/* Hero */}
-        <section className="bg-hero-radial">
-          <div className="container py-20 lg:py-28 text-center">
-            <span className="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground shadow-soft">
-              About BlockTerraLab
-            </span>
-            <h1 className="mt-5 font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-              The team building the <span className="text-gradient">on-chain real economy</span>
+        <section className="bg-hero-radial border-b border-border/60">
+          <div className="container py-24 lg:py-32 max-w-5xl">
+            <Eyebrow>About · BlockTerraLab</Eyebrow>
+            <h1 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl font-bold tracking-[-0.03em] leading-[1.05]">
+              The team building the
+              <br className="hidden md:block" />{" "}
+              <span className="text-gradient">on-chain real economy.</span>
             </h1>
-            <p className="mt-5 max-w-2xl mx-auto text-lg text-muted-foreground">
+            <p className="mt-7 max-w-2xl text-lg md:text-xl leading-relaxed text-muted-foreground font-normal">
               We're a Seattle-based studio of engineers, designers and operators
               tokenizing real-world assets — starting with real estate.
             </p>
+            <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-4 text-sm">
+              {[
+                ["Founded", "2024"],
+                ["HQ", "Seattle, WA"],
+                ["Focus", "RWA · AI · Web3"],
+              ].map(([k, v]) => (
+                <div key={k} className="flex flex-col">
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+                    {k}
+                  </span>
+                  <span className="mt-1 font-display text-base font-semibold tracking-tight text-foreground">
+                    {v}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         {/* Team */}
-        <section className="container py-20">
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">Leadership</h2>
-            <p className="mt-3 text-muted-foreground">
-              Operators and builders with a track record across Web3, fintech and AI.
+        <section id="team" className="container py-24 lg:py-32">
+          <div className="max-w-2xl">
+            <Eyebrow>Leadership</Eyebrow>
+            <h2 className="mt-5 font-display text-4xl md:text-5xl font-bold tracking-[-0.02em] leading-[1.1]">
+              Operators and builders, end&#8209;to&#8209;end.
+            </h2>
+            <p className="mt-5 text-base md:text-lg leading-relaxed text-muted-foreground">
+              A senior team with a track record across Web3 protocols, fintech
+              infrastructure and applied AI — shipping production systems used
+              by real users.
             </p>
           </div>
-          <div className="mt-12 grid md:grid-cols-3 gap-6">
+
+          <div className="mt-14 grid md:grid-cols-3 gap-6">
             {TEAM.map((m) => (
-              <Card key={m.name} className="p-7 bg-gradient-card shadow-soft hover:shadow-elevated transition-all">
-                <div className="flex items-center gap-4">
-                  <Avatar className="h-16 w-16 bg-gradient-primary">
-                    <AvatarFallback className="bg-transparent text-primary-foreground font-display font-semibold text-lg">
-                      {m.initials}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <div className="font-display font-semibold text-lg">{m.name}</div>
-                    <div className="text-sm text-primary">{m.role}</div>
+              <Card
+                key={m.name}
+                className="group p-8 bg-gradient-card border-border/70 shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all duration-300"
+              >
+                <Avatar className="h-14 w-14 bg-gradient-primary ring-4 ring-primary/5">
+                  <AvatarFallback className="bg-transparent text-primary-foreground font-display font-bold tracking-tight text-base">
+                    {m.initials}
+                  </AvatarFallback>
+                </Avatar>
+                <div className="mt-5">
+                  <div className="font-display text-xl font-bold tracking-tight text-foreground">
+                    {m.name}
+                  </div>
+                  <div className="mt-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
+                    {m.role}
                   </div>
                 </div>
-                <p className="mt-5 text-sm text-muted-foreground leading-relaxed">{m.bio}</p>
+                <p className="mt-5 text-[15px] leading-[1.65] text-muted-foreground">
+                  {m.bio}
+                </p>
+                <div className="mt-6 flex items-center gap-2 text-muted-foreground">
+                  <a
+                    href="#"
+                    aria-label={`${m.name} on LinkedIn`}
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
+                  >
+                    <Linkedin className="h-3.5 w-3.5" />
+                  </a>
+                  <a
+                    href="#"
+                    aria-label={`${m.name} on X`}
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
+                  >
+                    <Twitter className="h-3.5 w-3.5" />
+                  </a>
+                </div>
               </Card>
             ))}
           </div>
         </section>
 
         {/* HQ + Map */}
-        <section className="container pb-24">
-          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
-            <Card className="p-8 lg:col-span-1 bg-gradient-card shadow-soft">
-              <h3 className="font-display text-2xl font-bold">Headquarters</h3>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Visit us in downtown Seattle, steps from the waterfront.
+        <section id="hq" className="border-t border-border/60 bg-secondary/30">
+          <div className="container py-24 lg:py-28">
+            <div className="max-w-2xl">
+              <Eyebrow>Headquarters</Eyebrow>
+              <h2 className="mt-5 font-display text-4xl md:text-5xl font-bold tracking-[-0.02em] leading-[1.1]">
+                Find us in <span className="text-gradient">Seattle</span>.
+              </h2>
+              <p className="mt-5 text-base md:text-lg leading-relaxed text-muted-foreground">
+                Our studio sits in downtown Seattle, steps from the waterfront
+                and the city's growing Web3 community.
               </p>
-              <ul className="mt-6 space-y-4 text-sm">
-                <li className="flex items-start gap-3">
-                  <MapPin className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <div>
-                    <div className="font-medium text-foreground">{name}</div>
-                    <div className="text-muted-foreground">{address}</div>
-                  </div>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Mail className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <a href="mailto:hello@blockterralab.com" className="text-muted-foreground hover:text-foreground">
-                    hello@blockterralab.com
-                  </a>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Phone className="h-5 w-5 text-primary shrink-0 mt-0.5" />
-                  <span className="text-muted-foreground">+1 (206) 555-0142</span>
-                </li>
-              </ul>
-            </Card>
-            <div className="lg:col-span-2 rounded-2xl overflow-hidden border border-border shadow-soft min-h-[420px]">
-              <iframe
-                title="BlockTerraLab HQ map"
-                src={mapSrc}
-                className="w-full h-full min-h-[420px]"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+            </div>
+
+            <div className="mt-12 grid lg:grid-cols-3 gap-6 items-stretch">
+              <Card className="p-8 lg:col-span-1 bg-card border-border/70 shadow-soft">
+                <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                  Visit · Contact
+                </div>
+                <h3 className="mt-3 font-display text-2xl font-bold tracking-tight">
+                  {name}
+                </h3>
+
+                <ul className="mt-7 space-y-5 text-[15px]">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                      <MapPin className="h-4 w-4" />
+                    </span>
+                    <div>
+                      <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                        Address
+                      </div>
+                      <div className="mt-0.5 font-medium text-foreground leading-snug">
+                        {address}
+                      </div>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                      <Mail className="h-4 w-4" />
+                    </span>
+                    <div>
+                      <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                        Email
+                      </div>
+                      <a
+                        href="mailto:hello@blockterralab.com"
+                        className="mt-0.5 block font-medium text-foreground hover:text-primary transition-colors"
+                      >
+                        hello@blockterralab.com
+                      </a>
+                    </div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                      <Phone className="h-4 w-4" />
+                    </span>
+                    <div>
+                      <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                        Phone
+                      </div>
+                      <div className="mt-0.5 font-medium text-foreground">
+                        +1 (206) 555-0142
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </Card>
+
+              <div className="lg:col-span-2 rounded-2xl overflow-hidden border border-border/70 shadow-soft min-h-[460px] bg-card">
+                <iframe
+                  title="BlockTerraLab HQ map"
+                  src={mapSrc}
+                  className="w-full h-full min-h-[460px]"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </div>
           </div>
         </section>
