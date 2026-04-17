@@ -1,0 +1,75 @@
+import { ArrowRight, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export const Hero = () => {
+  return (
+    <section className="relative overflow-hidden bg-hero-radial">
+      {/* Decorative orbs */}
+      <div className="pointer-events-none absolute -top-32 left-1/2 h-[640px] w-[640px] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl animate-glow-pulse" />
+      <div className="pointer-events-none absolute top-40 right-10 h-72 w-72 rounded-full bg-accent/15 blur-3xl animate-float" />
+      <div className="pointer-events-none absolute top-60 left-10 h-72 w-72 rounded-full bg-highlight/10 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+
+      <div className="container relative pt-20 pb-28 md:pt-28 md:pb-36">
+        <div className="mx-auto max-w-5xl text-center animate-fade-in-up">
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 backdrop-blur px-4 py-2 text-xs font-medium text-foreground/70 shadow-soft">
+            <Sparkles className="h-3.5 w-3.5 text-primary" />
+            Engineering Real Assets, On-Chain
+          </span>
+
+          <h1 className="mt-8 font-display font-bold tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-foreground">
+            The <span className="text-gradient">Tokenization Lab</span>
+            <br className="hidden sm:block" /> for Real-World Assets &{" "}
+            <span className="text-gradient">Blockchain</span> Innovation
+          </h1>
+
+          <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+            BlockTerraLab partners with funds, fintechs and enterprises to design,
+            audit and ship production-grade <span className="text-gradient-warm font-semibold">RWA tokenization</span> platforms — bridging
+            real assets with on-chain liquidity.
+          </p>
+
+          <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="hero" size="xl" className="group">
+              Start a Project
+              <ArrowRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+            <Button variant="soft" size="xl">
+              Explore Solutions
+            </Button>
+          </div>
+
+          {/* Trust stats */}
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
+            {[
+              { v: "$1.2B+", l: "Assets Tokenized" },
+              { v: "60+", l: "Smart Contracts Audited" },
+              { v: "12", l: "Chains Supported" },
+              { v: "24/7", l: "On-chain Monitoring" },
+            ].map((s) => (
+              <div key={s.l} className="text-center">
+                <div className="font-display text-3xl md:text-4xl font-bold text-gradient">{s.v}</div>
+                <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">{s.l}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Trusted-by bar */}
+      <div className="container pb-20">
+        <div className="rounded-3xl bg-surface-dark text-surface-dark-foreground py-6 px-8 shadow-elevated">
+          <div className="flex flex-wrap items-center justify-center md:justify-between gap-x-12 gap-y-4 opacity-90">
+            <span className="text-xs uppercase tracking-[0.2em] text-surface-dark-foreground/60">
+              Trusted by
+            </span>
+            {["Helix Capital", "Terra Yield", "OnChain RE", "Aurum DAO", "Stratum Labs", "Veridian"].map((n) => (
+              <span key={n} className="font-display font-semibold text-base md:text-lg tracking-tight">
+                {n}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
