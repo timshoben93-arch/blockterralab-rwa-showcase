@@ -31,11 +31,7 @@ const NAV = [
   { label: "Insights", href: "/#insights" },
 ];
 
-const COMPANY_ITEMS = [
-  { label: "About Us", desc: "Our mission and team", to: "/company", icon: Building2 },
-  { label: "Leadership", desc: "Meet CEO, CTO & Tech Lead", to: "/company#team", icon: Users },
-  { label: "Headquarters", desc: "Visit us in Seattle, WA", to: "/company#hq", icon: MapPin },
-];
+const COMPANY_ITEMS: { label: string; desc: string; to: string; icon: typeof Building2 }[] = [];
 
 export const Header = () => {
   return (
