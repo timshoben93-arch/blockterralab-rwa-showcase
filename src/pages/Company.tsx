@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone, Linkedin, Twitter } from "lucide-react";
+import { MapPin, Mail, Linkedin, Twitter } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Card } from "@/components/ui/card";
