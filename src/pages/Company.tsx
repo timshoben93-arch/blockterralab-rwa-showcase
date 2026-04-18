@@ -37,7 +37,7 @@ const Company = () => {
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-4 text-sm">
               {[
-                ["Founded", "2024"],
+                ["Founded", "2025"],
                 ["HQ", "Seattle, WA"],
                 ["Focus", "RWA · AI · Web3"],
               ].map(([k, v]) => (
