@@ -41,33 +41,6 @@ export const Header = () => {
         <nav className="hidden lg:flex items-center gap-8">
           <DropdownMenu>
             <DropdownMenuTrigger className="inline-flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors outline-none">
-              Services
-              <ChevronDown className="h-4 w-4" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="w-72">
-              {SERVICES.map((s) => {
-                const Icon = s.icon;
-                return (
-                  <DropdownMenuItem key={s.slug} asChild>
-                    <Link
-                      to={`/services/${s.slug}`}
-                      className="flex items-start gap-3 cursor-pointer py-2"
-                    >
-                      <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                        <Icon className="h-4 w-4" />
-                      </span>
-                      <span className="flex flex-col">
-                        <span className="text-sm font-medium text-foreground">{s.short}</span>
-                        <span className="text-xs text-muted-foreground line-clamp-1">{s.tagline}</span>
-                      </span>
-                    </Link>
-                  </DropdownMenuItem>
-                );
-              })}
-            </DropdownMenuContent>
-          </DropdownMenu>
-          <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors outline-none">
               Talent Recruitment
               <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
