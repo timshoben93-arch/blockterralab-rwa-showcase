@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronDown, Building2, Users, MapPin } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,7 +7,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { SERVICES } from "@/data/services";
 import { TALENTS } from "@/data/talents";
 import logo from "@/assets/logo.png";
 
