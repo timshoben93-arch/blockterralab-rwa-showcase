@@ -30,7 +30,7 @@ const NAV = [
   { label: "Insights", href: "/#insights" },
 ];
 
-const COMPANY_ITEMS: { label: string; desc: string; to: string; icon: typeof Building2 }[] = [];
+const COMPANY_ITEMS: { label: string; desc: string; to: string; icon: React.ComponentType<{ className?: string }> }[] = [];
 
 export const Header = () => {
   return (
