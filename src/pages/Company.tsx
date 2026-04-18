@@ -157,10 +157,10 @@ const Company = () => {
                         Email
                       </div>
                       <a
-                        href="mailto:hello@blockterralab.com"
+                        href="mailto:support@blockterralab.com"
                         className="mt-0.5 block font-medium text-foreground hover:text-primary transition-colors"
                       >
-                        hello@blockterralab.com
+                        support@blockterralab.com
                       </a>
                     </div>
                   </li>

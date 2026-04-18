@@ -1,7 +1,6 @@
 import { ArrowRight, ChevronDown, Building2, Users, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/ThemeToggle";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -133,10 +132,11 @@ export const Header = () => {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <ThemeToggle />
-          <Button variant="hero" size="pill" className="group">
-            Let's Talk
-            <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+          <Button variant="hero" size="pill" className="group" asChild>
+            <a href="https://calendly.com/blockterralab-support/30min" target="_blank" rel="noopener noreferrer">
+              Let's Talk
+              <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+            </a>
           </Button>
         </div>
       </div>
