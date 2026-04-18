@@ -81,7 +81,7 @@ const TalentPage = () => {
                     </li>
                     <li className="flex justify-between gap-4">
                       <span className="text-muted-foreground">Type</span>
-                      <span className="font-medium">Full-time</span>
+                      <span className="font-medium text-right">Full-time / Contract / Part-time / Freelance</span>
                     </li>
                     <li className="flex justify-between gap-4">
                       <span className="text-muted-foreground">Project</span>

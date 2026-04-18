@@ -29,9 +29,11 @@ export const Hero = () => {
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl" className="group">
-              Start a Project
-              <ArrowRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            <Button variant="hero" size="xl" className="group" asChild>
+              <a href="https://calendly.com/blockterralab-support/30min" target="_blank" rel="noopener noreferrer">
+                Book a Discovery Call
+                <ArrowRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
             <Button variant="soft" size="xl">
               Explore Solutions
