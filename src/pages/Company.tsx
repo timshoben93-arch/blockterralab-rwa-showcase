@@ -1,8 +1,8 @@
-import { MapPin, Mail, Linkedin, Twitter } from "lucide-react";
+import { MapPin, Mail, Linkedin } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Card } from "@/components/ui/card";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { TEAM, COMPANY_LOCATION } from "@/data/company";
 
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
