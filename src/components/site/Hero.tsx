@@ -21,18 +21,18 @@ export const Hero = () => {
 
       <div className="container relative pt-20 pb-28 md:pt-28 md:pb-36">
         <div className="mx-auto max-w-5xl text-center animate-fade-in-up">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 backdrop-blur px-4 py-2 text-xs font-medium text-foreground/70 shadow-soft">
-            <Sparkles className="h-3.5 w-3.5 text-primary" />
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 backdrop-blur px-4 py-2 text-xs font-medium text-white/85 shadow-soft">
+            <Sparkles className="h-3.5 w-3.5 text-primary-glow" />
             Engineering Real Assets, On-Chain
           </span>
 
-          <h1 className="mt-8 font-display font-bold tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-foreground">
+          <h1 className="mt-8 font-display font-bold tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-white drop-shadow-[0_2px_20px_rgba(0,0,0,0.5)]">
             The <span className="text-gradient">Tokenization Lab</span>
             <br className="hidden sm:block" /> for Real-World Assets &{" "}
             <span className="text-gradient">Blockchain</span> Innovation
           </h1>
 
-          <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
             BlockTerraLab partners with funds, fintechs and enterprises to design,
             audit and ship production-grade <span className="text-gradient-warm font-semibold">RWA tokenization</span> platforms — bridging
             real assets with on-chain liquidity.
