@@ -1,4 +1,5 @@
 import jermainePhoto from "@/assets/team-jermaine.jpg";
+import sidneiPhoto from "@/assets/team-sidnei.jpg";
 
 export type Member = {
   name: string;
@@ -18,9 +19,11 @@ export const TEAM: Member[] = [
     linkedin: "https://www.linkedin.com/in/jermaine-johnson-093894b9/",
   },
   {
-    name: "Priya Raman",
+    name: "Sidnei A.",
     role: "Chief Technology Officer",
-    initials: "PR",
+    initials: "SA",
+    photo: sidneiPhoto,
+    linkedin: "https://www.linkedin.com/in/sidnei-andr%C3%A9-720956171/",
   },
   {
     name: "Marcus Lee",
