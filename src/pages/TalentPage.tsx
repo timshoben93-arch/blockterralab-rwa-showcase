@@ -53,7 +53,7 @@ const TalentPage = () => {
                 </p>
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
                   <Button variant="hero" size="xl" className="group" asChild>
-                    <a href="/#contact">
+                    <a href={`/talents/${talent.slug}/apply`} target="_blank" rel="noopener noreferrer">
                       Apply for this role
                       <ArrowRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
                     </a>
@@ -161,7 +161,7 @@ const TalentPage = () => {
               </p>
               <div className="mt-6 flex justify-center">
                 <Button variant="hero" size="xl" asChild>
-                  <a href="/#contact">Apply Now</a>
+                  <a href={`/talents/${talent.slug}/apply`} target="_blank" rel="noopener noreferrer">Apply Now</a>
                 </Button>
               </div>
             </div>
