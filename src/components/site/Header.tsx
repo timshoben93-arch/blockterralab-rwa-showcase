@@ -34,16 +34,16 @@ const COMPANY_ITEMS: { label: string; desc: string; to: string; icon: React.Comp
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-background/70 border-b border-border/50">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-xl bg-background/80 border-b border-border/60">
       <div className="container flex h-20 items-center justify-between">
         <Logo />
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-1">
           <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex items-center gap-1 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors outline-none">
+            <DropdownMenuTrigger className="inline-flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium text-foreground/75 hover:text-foreground hover:bg-secondary/70 transition-colors outline-none">
               Talent Recruitment
-              <ChevronDown className="h-4 w-4" />
+              <ChevronDown className="h-4 w-4 opacity-70" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="w-72 max-h-[70vh] overflow-y-auto">
+            <DropdownMenuContent align="start" className="w-72 max-h-[70vh] overflow-y-auto rounded-xl border-border/70 shadow-elevated">
               {TALENTS.map((t) => {
                 const Icon = t.icon;
                 return (
@@ -67,7 +67,7 @@ export const Header = () => {
           </DropdownMenu>
           <Link
             to="/company"
-            className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+            className="px-3 py-2 rounded-lg text-sm font-medium text-foreground/75 hover:text-foreground hover:bg-secondary/70 transition-colors"
           >
             Company
           </Link>
@@ -75,7 +75,7 @@ export const Header = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              className="px-3 py-2 rounded-lg text-sm font-medium text-foreground/75 hover:text-foreground hover:bg-secondary/70 transition-colors"
             >
               {item.label}
             </a>
@@ -90,6 +90,7 @@ export const Header = () => {
           </Button>
         </div>
       </div>
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
     </header>
   );
 };
