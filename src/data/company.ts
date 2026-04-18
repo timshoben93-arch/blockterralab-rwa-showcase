@@ -1,16 +1,22 @@
+import jermainePhoto from "@/assets/team-jermaine.jpg";
+
 export type Member = {
   name: string;
   role: string;
   bio: string;
   initials: string;
+  photo?: string;
+  linkedin?: string;
 };
 
 export const TEAM: Member[] = [
   {
-    name: "Ethan Caldwell",
+    name: "Jermaine J.",
     role: "Chief Executive Officer",
-    initials: "EC",
-    bio: "15+ years scaling fintech and Web3 ventures. Former Head of Digital Assets at a tier-1 bank, leading BlockTerraLab's vision to bring real estate on-chain.",
+    initials: "JJ",
+    photo: jermainePhoto,
+    linkedin: "https://www.linkedin.com/in/jermaine-johnson-093894b9/",
+    bio: "Leads BlockTerraLab's vision to bring real estate on-chain, bridging fintech and Web3 to unlock fractional ownership of real-world assets.",
   },
   {
     name: "Priya Raman",
