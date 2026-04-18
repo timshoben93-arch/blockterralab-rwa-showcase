@@ -1,8 +1,8 @@
-import { MapPin, Mail, Linkedin, Twitter } from "lucide-react";
+import { MapPin, Mail, Linkedin } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Card } from "@/components/ui/card";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { TEAM, COMPANY_LOCATION } from "@/data/company";
 
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
@@ -74,7 +74,8 @@ const Company = () => {
                 key={m.name}
                 className="group p-8 bg-gradient-card border-border/70 shadow-soft hover:shadow-elevated hover:-translate-y-1 transition-all duration-300"
               >
-                <Avatar className="h-14 w-14 bg-gradient-primary ring-4 ring-primary/5">
+                <Avatar className="h-16 w-16 bg-gradient-primary ring-4 ring-primary/5">
+                  {m.photo && <AvatarImage src={m.photo} alt={m.name} className="object-cover" />}
                   <AvatarFallback className="bg-transparent text-primary-foreground font-display font-bold tracking-tight text-base">
                     {m.initials}
                   </AvatarFallback>
@@ -90,22 +91,19 @@ const Company = () => {
                 <p className="mt-5 text-[15px] leading-[1.65] text-muted-foreground">
                   {m.bio}
                 </p>
-                <div className="mt-6 flex items-center gap-2 text-muted-foreground">
-                  <a
-                    href="#"
-                    aria-label={`${m.name} on LinkedIn`}
-                    className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
-                  >
-                    <Linkedin className="h-3.5 w-3.5" />
-                  </a>
-                  <a
-                    href="#"
-                    aria-label={`${m.name} on X`}
-                    className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
-                  >
-                    <Twitter className="h-3.5 w-3.5" />
-                  </a>
-                </div>
+                {m.linkedin && (
+                  <div className="mt-6 flex items-center gap-2 text-muted-foreground">
+                    <a
+                      href={m.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${m.name} on LinkedIn`}
+                      className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
+                    >
+                      <Linkedin className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                )}
               </Card>
             ))}
           </div>
