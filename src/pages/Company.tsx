@@ -1,4 +1,4 @@
-import { MapPin, Mail, Phone, Linkedin, Twitter } from "lucide-react";
+import { MapPin, Mail, Linkedin, Twitter } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Card } from "@/components/ui/card";
@@ -162,19 +162,6 @@ const Company = () => {
                       >
                         support@blockterralab.com
                       </a>
-                    </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                      <Phone className="h-4 w-4" />
-                    </span>
-                    <div>
-                      <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                        Phone
-                      </div>
-                      <div className="mt-0.5 font-medium text-foreground">
-                        +1 (206) 555-0142
-                      </div>
                     </div>
                   </li>
                 </ul>
