@@ -88,9 +88,11 @@ const Company = () => {
                     {m.role}
                   </div>
                 </div>
-                <p className="mt-5 text-[15px] leading-[1.65] text-muted-foreground">
-                  {m.bio}
-                </p>
+                {m.bio && (
+                  <p className="mt-5 text-[15px] leading-[1.65] text-muted-foreground">
+                    {m.bio}
+                  </p>
+                )}
                 {m.linkedin && (
                   <div className="mt-6 flex items-center gap-2 text-muted-foreground">
                     <a
