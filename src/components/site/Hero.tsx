@@ -40,20 +40,6 @@ export const Hero = () => {
             </Button>
           </div>
 
-          {/* Trust stats */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
-            {[
-              { v: "$1.2B+", l: "Assets Tokenized" },
-              { v: "60+", l: "Smart Contracts Audited" },
-              { v: "12", l: "Chains Supported" },
-              { v: "24/7", l: "On-chain Monitoring" },
-            ].map((s) => (
-              <div key={s.l} className="text-center">
-                <div className="font-display text-3xl md:text-4xl font-bold text-gradient">{s.v}</div>
-                <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">{s.l}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
