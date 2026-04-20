@@ -5,6 +5,7 @@ import { TALENTS } from "@/data/talents";
 export const Footer = () => {
   const navLinks = [
     { label: "Company", to: "/company" },
+    { label: "Docs", to: "/docs" },
     { label: "RWA", to: "/#rwa" },
     { label: "Industries", to: "/#industries" },
     { label: "Insights", to: "/#insights" },
