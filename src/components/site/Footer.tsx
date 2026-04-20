@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Mail } from "lucide-react";
 import { TALENTS } from "@/data/talents";
+import { DOCS } from "@/data/docs";
 
 export const Footer = () => {
   const navLinks = [
