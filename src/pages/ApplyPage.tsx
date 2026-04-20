@@ -78,7 +78,7 @@ const ApplyPage = () => {
 
     try {
       await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSd_REPLACE/formResponse",
+        "https://docs.google.com/forms/d/e/1FAIpQLSfT4euNBTT2UYkPLXdQuFO9Hs0dOqjvKpwFXzsHsROxMXhY_A/formResponse",
         { method: "POST", mode: "no-cors", body: formData }
       );
     } catch {
