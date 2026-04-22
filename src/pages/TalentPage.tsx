@@ -76,7 +76,7 @@ const TalentPage = () => {
               <div className="mt-10 flex flex-wrap gap-3">
                 {[
                   { icon: MapPin, label: "Remote · Global" },
-                  { icon: Clock, label: "Full-time / Contract" },
+                  { icon: Clock, label: "Full-time / Part-time / Freelancer" },
                   { icon: Users, label: "BlockTerraLab Core" },
                   { icon: Layers, label: "RWA Real-Estate" },
                 ].map(({ icon: I, label }) => (
