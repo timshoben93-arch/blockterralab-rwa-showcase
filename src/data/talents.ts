@@ -10,6 +10,7 @@ import {
   Package,
   Settings,
   ShieldCheck,
+  Network,
   type LucideIcon,
 } from "lucide-react";
 
@@ -28,6 +29,30 @@ const PROJECT_CONTEXT =
   "BlockTerraLab is building a Real-World Asset (RWA) platform that enables fractional ownership of real estate through blockchain tokenization, enhanced with AI-driven personalization and immersive 3D property exploration.";
 
 export const TALENTS: Talent[] = [
+  {
+    slug: "blockchain-architect",
+    title: "Blockchain Architect",
+    short: "Blockchain Architect",
+    tagline: "Architect the secure, scalable Web3 core of our RWA platform.",
+    icon: Network,
+    overview:
+      "We’re looking for a Blockchain Architect to help design and build the core Web3 infrastructure behind this project. This role sits at the intersection of smart contract architecture, backend integration, and product scalability — working closely with our engineering, product, and DevOps teams to bring secure, production-ready blockchain features to life.",
+    responsibilities: [
+      "Design the end-to-end blockchain architecture for tokenization, ownership, and transaction flows.",
+      "Define smart contract patterns, upgradeability strategies, and multi-chain deployment standards (Ethereum / Polygon).",
+      "Partner with backend and DevOps teams to integrate on-chain systems with off-chain services, indexing, and data pipelines.",
+      "Lead security reviews, threat modeling, and coordinate third-party audits for production releases.",
+      "Guide engineers on best practices for gas optimization, key management, and protocol scalability.",
+    ],
+    qualifications: [
+      "5+ years of blockchain engineering experience, with 2+ years in an architect or tech-lead role.",
+      "Deep expertise in Solidity, EVM internals, and smart contract security patterns.",
+      "Experience designing tokenization systems using ERC-20 / ERC-721 / ERC-1155.",
+      "Strong background integrating smart contracts with backend services, indexers, and wallet infrastructure.",
+      "Familiarity with Layer-2s, bridges, and multi-chain deployments.",
+      "Bonus: experience with RWA, DeFi protocols, or regulated fintech environments.",
+    ],
+  },
   {
     slug: "solidity-smart-contract-developer",
     title: "Solidity / Smart Contract Developer",
