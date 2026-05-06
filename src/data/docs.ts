@@ -42,7 +42,7 @@ export const DOCS: DocChapter[] = [
         heading: "1.2 Resource Utilization",
         body: [
           "Existing blockchain networks suffer from dramatic inefficiencies in computational and network resource utilization. Proof-of-Work systems, while battle-tested for security, consume energy disproportionate to their economic throughput.",
-          "BlockTerraLab's architecture replaces wasteful hash-grinding with Proof-of-Relay — a novel contribution mechanism that rewards nodes for actual network utility: forwarding data packets, maintaining uptime SLAs, and serving routing queries.",
+          "TokenBrickLabs's architecture replaces wasteful hash-grinding with Proof-of-Relay — a novel contribution mechanism that rewards nodes for actual network utility: forwarding data packets, maintaining uptime SLAs, and serving routing queries.",
         ],
       },
       {
@@ -60,10 +60,10 @@ export const DOCS: DocChapter[] = [
     tagline: "Objectives, architecture pillars, and the developer ecosystem.",
     icon: Eye,
     intro:
-      "BlockTerraLab is built on four foundational objectives that guide every architectural and governance decision within the protocol.",
+      "TokenBrickLabs is built on four foundational objectives that guide every architectural and governance decision within the protocol.",
     sections: [
       {
-        heading: "2.1 Objectives of BlockTerraLab",
+        heading: "2.1 Objectives of TokenBrickLabs",
         body: [
           "Bridge institutional-grade real estate with on-chain liquidity, eliminate retail barriers to entry, and provide regulatory-compliant ownership transfer at internet scale.",
         ],
@@ -86,7 +86,7 @@ export const DOCS: DocChapter[] = [
       {
         heading: "2.4 Networking Toolkit for DApp Development",
         body: [
-          "BlockTerraLab exposes a comprehensive SDK enabling developers to build dApps without deep blockchain expertise.",
+          "TokenBrickLabs exposes a comprehensive SDK enabling developers to build dApps without deep blockchain expertise.",
         ],
         bullets: [
           "BTL.js — JavaScript/TypeScript SDK with React hooks included.",
@@ -128,12 +128,12 @@ export const DOCS: DocChapter[] = [
     tagline: "Architecture, topology, routing, and decentralization mechanisms.",
     icon: Network,
     intro:
-      "BlockTerraLab introduces a new networking primitive: a self-organizing, self-evolving relay network that rewards useful work.",
+      "TokenBrickLabs introduces a new networking primitive: a self-organizing, self-evolving relay network that rewards useful work.",
     sections: [
       {
         heading: "4.1 Next Generation Decentralized Network",
         body: [
-          "Geographic-aware node selection, QoS-tiered relays, and identity-bound routing form the foundation of the BlockTerraLab network layer.",
+          "Geographic-aware node selection, QoS-tiered relays, and identity-bound routing form the foundation of the TokenBrickLabs network layer.",
         ],
       },
       {
@@ -152,7 +152,7 @@ export const DOCS: DocChapter[] = [
       {
         heading: "4.4 Efficient Decentralization",
         body: [
-          "Decentralization is measured by the Nakamoto Coefficient — the minimum number of entities whose collusion would compromise the network. BlockTerraLab targets a Nakamoto Coefficient ≥ 100 across block production, relay provision, oracle feeds, and governance voting.",
+          "Decentralization is measured by the Nakamoto Coefficient — the minimum number of entities whose collusion would compromise the network. TokenBrickLabs targets a Nakamoto Coefficient ≥ 100 across block production, relay provision, oracle feeds, and governance voting.",
         ],
       },
     ],
@@ -161,7 +161,7 @@ export const DOCS: DocChapter[] = [
     slug: "consensus",
     number: "05",
     title: "Cellular Automata Powered Consensus",
-    tagline: "The mathematical framework behind BlockTerraLab's consensus mechanism.",
+    tagline: "The mathematical framework behind TokenBrickLabs's consensus mechanism.",
     icon: Boxes,
     intro:
       "Mainstream consensus mechanisms (PoW, PoS, BFT) each carry trade-offs between energy use, finality, and decentralization. CA-powered consensus offers a different operating point.",
@@ -199,12 +199,12 @@ export const DOCS: DocChapter[] = [
     tagline: "Bridging physical property value with decentralized finance infrastructure.",
     icon: Flag,
     intro:
-      "BlockTerraLab combines fractional real estate ownership, regulated SPV backing, and a novel CA-powered consensus to create the first protocol designed end-to-end for tokenized real-world assets at institutional scale.",
+      "TokenBrickLabs combines fractional real estate ownership, regulated SPV backing, and a novel CA-powered consensus to create the first protocol designed end-to-end for tokenized real-world assets at institutional scale.",
     sections: [
       {
         heading: "Outlook",
         body: [
-          "By aligning network rewards with useful work, embedding compliance at the contract level, and targeting a Nakamoto Coefficient ≥ 100, BlockTerraLab positions itself as the foundational layer for the next generation of on-chain real estate markets.",
+          "By aligning network rewards with useful work, embedding compliance at the contract level, and targeting a Nakamoto Coefficient ≥ 100, TokenBrickLabs positions itself as the foundational layer for the next generation of on-chain real estate markets.",
         ],
       },
     ],

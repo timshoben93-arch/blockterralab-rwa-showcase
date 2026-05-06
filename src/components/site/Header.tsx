@@ -14,11 +14,11 @@ const Logo = () => (
   <Link to="/" className="flex items-center gap-2.5 group">
     <img
       src={logo}
-      alt="BlockTerraLab logo"
+      alt="TokenBrickLabs logo"
       className="h-10 w-10 rounded-xl shadow-soft object-contain"
     />
     <div className="leading-tight">
-      <div className="font-display font-bold tracking-tight text-foreground">BlockTerraLab</div>
+      <div className="font-display font-bold tracking-tight text-foreground">TokenBrickLabs</div>
       <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">RWA · Blockchain Lab</div>
     </div>
   </Link>
@@ -89,7 +89,7 @@ export const Header = () => {
         </nav>
         <div className="flex items-center gap-2">
           <Button variant="hero" size="pill" className="group" asChild>
-            <a href="https://calendly.com/blockterralab-support/30min" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendly.com/tokenbricklabs-support/30min" target="_blank" rel="noopener noreferrer">
               Let's Talk
               <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>

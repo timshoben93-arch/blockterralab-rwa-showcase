@@ -22,13 +22,13 @@ export const CTA = () => {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <Button variant="default" size="xl" className="bg-background text-foreground hover:bg-background/90 group" asChild>
-                <a href="https://calendly.com/blockterralab-support/30min" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/tokenbricklabs-support/30min" target="_blank" rel="noopener noreferrer">
                   Book a Discovery Call
                   <ArrowRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
               <Button variant="ghost" size="xl" className="text-primary-foreground hover:bg-primary-foreground/10" asChild>
-                <a href="mailto:support@blockterralab.com">support@blockterralab.com</a>
+                <a href="mailto:support@tokenbricklabs.com">support@tokenbricklabs.com</a>
               </Button>
             </div>
           </div>

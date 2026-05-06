@@ -57,7 +57,7 @@ export const Services = () => {
             End-to-end <span className="text-gradient">blockchain engineering</span> for real assets.
           </h2>
           <p className="mt-5 text-lg text-muted-foreground">
-            From tokenization design to audited deployment, BlockTerraLab is the technical
+            From tokenization design to audited deployment, TokenBrickLabs is the technical
             backbone behind some of the most ambitious RWA platforms in market.
           </p>
         </div>

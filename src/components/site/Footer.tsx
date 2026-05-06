@@ -34,7 +34,7 @@ export const Footer = () => {
                 </svg>
               </div>
               <div className="leading-tight">
-                <div className="font-display font-bold tracking-tight text-base">BlockTerraLab</div>
+                <div className="font-display font-bold tracking-tight text-base">TokenBrickLabs</div>
                 <div className="text-[10px] uppercase tracking-[0.18em] text-surface-dark-foreground/50">RWA · Blockchain Lab</div>
               </div>
             </div>
@@ -43,11 +43,11 @@ export const Footer = () => {
               Audited. Compliant. Production-grade.
             </p>
             <a
-              href="mailto:support@blockterralab.com"
+              href="mailto:support@tokenbricklabs.com"
               className="mt-6 inline-flex items-center gap-2 text-sm text-surface-dark-foreground/80 hover:text-primary-glow transition-colors group"
             >
               <Mail className="h-4 w-4" />
-              support@blockterralab.com
+              support@tokenbricklabs.com
               <ArrowUpRight className="h-3.5 w-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
             </a>
             <div className="mt-6 flex items-center gap-3">
@@ -55,7 +55,7 @@ export const Footer = () => {
                 href="https://www.linkedin.com/c/blockterra-lab/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="BlockTerraLab on LinkedIn"
+                aria-label="TokenBrickLabs on LinkedIn"
                 className="group inline-flex h-10 w-10 items-center justify-center rounded-xl border border-surface-dark-foreground/15 bg-surface-dark-foreground/5 text-surface-dark-foreground/80 hover:text-primary-foreground hover:bg-gradient-primary hover:border-transparent hover:shadow-glow transition-all"
               >
                 <Linkedin className="h-4 w-4" />
@@ -126,7 +126,7 @@ export const Footer = () => {
                 Discovery call in 30 minutes. Walk away with a clear tokenization roadmap.
               </p>
               <a
-                href="https://calendly.com/blockterralab-support/30min"
+                href="https://calendly.com/tokenbricklabs-support/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-gradient-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-elevated hover:shadow-glow transition-shadow"
@@ -140,7 +140,7 @@ export const Footer = () => {
 
         <div className="mt-16 pt-8 border-t border-surface-dark-foreground/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-surface-dark-foreground/55">
-            © {new Date().getFullYear()} BlockTerraLab. All rights reserved.
+            © {new Date().getFullYear()} TokenBrickLabs. All rights reserved.
           </p>
           <div className="flex gap-7 text-xs text-surface-dark-foreground/55">
             <a

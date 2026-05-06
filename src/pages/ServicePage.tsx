@@ -13,7 +13,7 @@ const ServicePage = () => {
 
   useEffect(() => {
     if (service) {
-      document.title = `${service.title} | BlockTerraLab`;
+      document.title = `${service.title} | TokenBrickLabs`;
       const desc = document.querySelector('meta[name="description"]');
       if (desc) desc.setAttribute("content", service.tagline);
     }
@@ -42,7 +42,7 @@ const ServicePage = () => {
             <div className="mt-8 grid lg:grid-cols-[1.4fr_1fr] gap-12 items-start">
               <div className="animate-fade-in-up">
                 <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 backdrop-blur px-4 py-2 text-xs font-medium text-foreground/70 shadow-soft">
-                  BlockTerraLab Services
+                  TokenBrickLabs Services
                 </span>
                 <h1 className="mt-6 font-display font-bold tracking-tight text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
                   <span className="text-gradient">{service.title}</span>

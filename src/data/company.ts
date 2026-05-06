@@ -36,7 +36,7 @@ export const TEAM: Member[] = [
 ];
 
 export const COMPANY_LOCATION = {
-  name: "BlockTerraLab HQ",
+  name: "TokenBrickLabs HQ",
   address: "1208 2nd Avenue, Seattle, WA 98101",
   // Seattle downtown bounding box (left, bottom, right, top), marker lat/lon
   lat: 47.6079,
