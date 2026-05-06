@@ -33,14 +33,14 @@ export const Hero = () => {
           </h1>
 
           <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
-            BlockTerraLab partners with funds, fintechs and enterprises to design,
+            TokenBrickLabs partners with funds, fintechs and enterprises to design,
             audit and ship production-grade <span className="text-gradient-warm font-semibold">RWA tokenization</span> platforms — bridging
             real assets with on-chain liquidity.
           </p>
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="xl" className="group" asChild>
-              <a href="https://calendly.com/blockterralab-support/30min" target="_blank" rel="noopener noreferrer">
+              <a href="https://calendly.com/tokenbricklabs-support/30min" target="_blank" rel="noopener noreferrer">
                 Book a Discovery Call
                 <ArrowRight className="ml-1 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>

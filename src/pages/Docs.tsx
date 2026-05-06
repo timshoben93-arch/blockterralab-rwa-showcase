@@ -19,7 +19,7 @@ const Docs = () => {
               Technical Whitepaper · v1.0 · 2026
             </div>
             <h1 className="mt-6 font-display text-4xl md:text-6xl font-bold tracking-tight max-w-3xl">
-              BlockTerraLab Documentation
+              TokenBrickLabs Documentation
             </h1>
             <p className="mt-5 max-w-2xl text-base md:text-lg text-surface-dark-foreground/75 leading-relaxed">
               A decentralized real-world asset tokenization protocol powered by Cellular Automata consensus. Explore the full technical architecture, vision, and consensus model.

@@ -13,7 +13,7 @@ const TalentPage = () => {
 
   useEffect(() => {
     if (talent) {
-      document.title = `${talent.title} — Careers | BlockTerraLab`;
+      document.title = `${talent.title} — Careers | TokenBrickLabs`;
       const desc = document.querySelector('meta[name="description"]');
       if (desc) desc.setAttribute("content", talent.tagline);
     }
@@ -77,7 +77,7 @@ const TalentPage = () => {
                 {[
                   { icon: MapPin, label: "Remote · Global" },
                   { icon: Clock, label: "Full-time / Part-time / Freelancer" },
-                  { icon: Users, label: "BlockTerraLab Core" },
+                  { icon: Users, label: "TokenBrickLabs Core" },
                   { icon: Layers, label: "RWA Real-Estate" },
                 ].map(({ icon: I, label }) => (
                   <div

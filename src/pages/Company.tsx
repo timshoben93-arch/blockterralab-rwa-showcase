@@ -25,7 +25,7 @@ const Company = () => {
         {/* Hero */}
         <section className="bg-hero-radial border-b border-border/60">
           <div className="container py-24 lg:py-32 max-w-5xl">
-            <Eyebrow>About · BlockTerraLab</Eyebrow>
+            <Eyebrow>About · TokenBrickLabs</Eyebrow>
             <h1 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl font-bold tracking-[-0.03em] leading-[1.05]">
               The team building the
               <br className="hidden md:block" />{" "}
@@ -157,10 +157,10 @@ const Company = () => {
                         Email
                       </div>
                       <a
-                        href="mailto:support@blockterralab.com"
+                        href="mailto:support@tokenbricklabs.com"
                         className="mt-0.5 block font-medium text-foreground hover:text-primary transition-colors"
                       >
-                        support@blockterralab.com
+                        support@tokenbricklabs.com
                       </a>
                     </div>
                   </li>
@@ -169,7 +169,7 @@ const Company = () => {
 
               <div className="lg:col-span-2 rounded-2xl overflow-hidden border border-border/70 shadow-soft min-h-[460px] bg-card">
                 <iframe
-                  title="BlockTerraLab HQ map"
+                  title="TokenBrickLabs HQ map"
                   src={mapSrc}
                   className="w-full h-full min-h-[460px]"
                   loading="lazy"

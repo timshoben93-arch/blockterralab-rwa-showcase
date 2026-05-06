@@ -28,7 +28,7 @@ const ApplyPage = () => {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    if (talent) document.title = `Apply · ${talent.title} | BlockTerraLab`;
+    if (talent) document.title = `Apply · ${talent.title} | TokenBrickLabs`;
   }, [talent]);
 
   if (!talent) return <Navigate to="/" replace />;
@@ -94,8 +94,8 @@ const ApplyPage = () => {
       <header className="border-b border-border/60 bg-background/80 backdrop-blur sticky top-0 z-40">
         <div className="container flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center gap-2.5">
-            <img src={logo} alt="BlockTerraLab" className="h-8 w-8 rounded-lg object-contain" />
-            <span className="font-display font-bold tracking-tight">BlockTerraLab</span>
+            <img src={logo} alt="TokenBrickLabs" className="h-8 w-8 rounded-lg object-contain" />
+            <span className="font-display font-bold tracking-tight">TokenBrickLabs</span>
           </Link>
           <Link
             to={`/talents/${talent.slug}`}

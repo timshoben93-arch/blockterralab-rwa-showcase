@@ -26,7 +26,7 @@ export type Talent = {
 };
 
 const PROJECT_CONTEXT =
-  "BlockTerraLab is building a Real-World Asset (RWA) platform that enables fractional ownership of real estate through blockchain tokenization, enhanced with AI-driven personalization and immersive 3D property exploration.";
+  "TokenBrickLabs is building a Real-World Asset (RWA) platform that enables fractional ownership of real estate through blockchain tokenization, enhanced with AI-driven personalization and immersive 3D property exploration.";
 
 export const TALENTS: Talent[] = [
   {
@@ -202,7 +202,7 @@ export const TALENTS: Talent[] = [
     responsibilities: [
       "Identify, pitch and close partnerships with real-estate sponsors and institutional investors.",
       "Build and manage a structured pipeline of deals from prospecting to close.",
-      "Represent BlockTerraLab at industry events, conferences and partner meetings.",
+      "Represent TokenBrickLabs at industry events, conferences and partner meetings.",
       "Work with legal and product teams to structure compliant tokenization deals.",
       "Own KPIs around partnerships, AUM onboarded and revenue.",
     ],
