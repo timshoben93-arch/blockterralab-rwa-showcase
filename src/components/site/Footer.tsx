@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Mail } from "lucide-react";
-import { TALENTS } from "@/data/talents";
 import { DOCS } from "@/data/docs";
 
 export const Footer = () => {
   const navLinks = [
+    { label: "Talent Recruitment", to: "/talents" },
     { label: "Company", to: "/company" },
     { label: "Docs", to: "/docs" },
     { label: "RWA", to: "/#rwa" },
@@ -52,27 +52,8 @@ export const Footer = () => {
             </a>
           </div>
 
-          {/* Talent */}
-          <div className="lg:col-span-3">
-            <h4 className="font-display font-semibold text-xs uppercase tracking-[0.18em] text-surface-dark-foreground/50">
-              Talent Recruitment
-            </h4>
-            <ul className="mt-5 space-y-3">
-              {TALENTS.map((t) => (
-                <li key={t.slug}>
-                  <Link
-                    to={`/talents/${t.slug}`}
-                    className="text-sm text-surface-dark-foreground/75 hover:text-primary-glow transition-colors"
-                  >
-                    {t.short}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Navigation */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-5">
             <h4 className="font-display font-semibold text-xs uppercase tracking-[0.18em] text-surface-dark-foreground/50">
               Navigation
             </h4>
