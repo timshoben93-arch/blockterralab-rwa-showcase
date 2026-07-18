@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import ServicePage from "./pages/ServicePage.tsx";
 import TalentPage from "./pages/TalentPage.tsx";
+import TalentsIndex from "./pages/TalentsIndex.tsx";
 import ApplyPage from "./pages/ApplyPage.tsx";
 import Company from "./pages/Company.tsx";
 import Docs from "./pages/Docs.tsx";
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/services/:slug" element={<ServicePage />} />
           <Route path="/talents/:slug" element={<TalentPage />} />
+          <Route path="/talents" element={<TalentsIndex />} />
           <Route path="/talents/:slug/apply" element={<ApplyPage />} />
           <Route path="/company" element={<Company />} />
           <Route path="/docs" element={<Docs />} />
