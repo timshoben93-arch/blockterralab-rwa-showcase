@@ -1,13 +1,6 @@
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { TALENTS } from "@/data/talents";
 import logo from "@/assets/logo.png";
 
 const Logo = () => (
@@ -38,33 +31,12 @@ export const Header = () => {
       <div className="container flex h-20 items-center justify-between">
         <Logo />
         <nav className="hidden lg:flex items-center gap-1">
-          <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium text-foreground/75 hover:text-foreground hover:bg-secondary/70 transition-colors outline-none">
-              Talent Recruitment
-              <ChevronDown className="h-4 w-4 opacity-70" />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="w-72 max-h-[70vh] overflow-y-auto rounded-xl border-border/70 shadow-elevated">
-              {TALENTS.map((t) => {
-                const Icon = t.icon;
-                return (
-                  <DropdownMenuItem key={t.slug} asChild>
-                    <Link
-                      to={`/talents/${t.slug}`}
-                      className="flex items-start gap-3 cursor-pointer py-2"
-                    >
-                      <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent/10 text-accent">
-                        <Icon className="h-4 w-4" />
-                      </span>
-                      <span className="flex flex-col">
-                        <span className="text-sm font-medium text-foreground">{t.short}</span>
-                        <span className="text-xs text-muted-foreground line-clamp-1">{t.tagline}</span>
-                      </span>
-                    </Link>
-                  </DropdownMenuItem>
-                );
-              })}
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Link
+            to="/talents"
+            className="px-3 py-2 rounded-lg text-sm font-medium text-foreground/75 hover:text-foreground hover:bg-secondary/70 transition-colors"
+          >
+            Talent Recruitment
+          </Link>
           <Link
             to="/company"
             className="px-3 py-2 rounded-lg text-sm font-medium text-foreground/75 hover:text-foreground hover:bg-secondary/70 transition-colors"
