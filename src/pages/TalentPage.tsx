@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
-import { ArrowRight, ArrowLeft, Sparkles, MapPin, Clock, Users, Layers, Zap, Target, Award } from "lucide-react";
+import { ArrowRight, ArrowLeft, Sparkles, MapPin, Clock, Users, Layers, Zap, Target, Award, Star, Gift, Cpu } from "lucide-react";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { CTA } from "@/components/site/CTA";
@@ -72,6 +72,13 @@ const TalentPage = () => {
                 {talent.tagline}
               </p>
 
+              {talent.reportsTo && (
+                <p className="mt-6 text-sm font-medium text-foreground/70">
+                  <span className="uppercase tracking-[0.2em] text-accent text-xs mr-2">Reports to</span>
+                  {talent.reportsTo}
+                </p>
+              )}
+
               {/* Quick facts pills */}
               <div className="mt-10 flex flex-wrap gap-3">
                 {[
@@ -141,6 +148,15 @@ const TalentPage = () => {
                   </div>
                 </div>
 
+                {talent.extraSections?.map((sec) => (
+                  <div key={sec.heading}>
+                    <h3 className="font-display text-2xl md:text-3xl font-bold tracking-tight mb-5">
+                      {sec.heading}
+                    </h3>
+                    <p className="text-lg text-foreground/75 leading-[1.75] font-light">{sec.body}</p>
+                  </div>
+                ))}
+
                 {/* Responsibilities */}
                 <div>
                   <div className="flex items-center gap-3 mb-8">
@@ -197,6 +213,93 @@ const TalentPage = () => {
                     ))}
                   </div>
                 </div>
+
+                {talent.niceToHave && talent.niceToHave.length > 0 && (
+                  <div>
+                    <div className="flex items-center gap-3 mb-8">
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                        <Star className="h-5 w-5" />
+                      </span>
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">04 — Nice to have</p>
+                        <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
+                          Bonus <span className="text-gradient italic">points</span>
+                        </h2>
+                      </div>
+                    </div>
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {talent.niceToHave.map((n) => (
+                        <div key={n} className="rounded-2xl border border-border bg-card p-5">
+                          <div className="flex items-start gap-3">
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                            <p className="text-foreground/85 leading-relaxed text-[15px]">{n}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {talent.benefits && talent.benefits.length > 0 && (
+                  <div>
+                    <div className="flex items-center gap-3 mb-8">
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                        <Gift className="h-5 w-5" />
+                      </span>
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">05 — Benefits</p>
+                        <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
+                          What you'll <span className="text-gradient italic">get</span>
+                        </h2>
+                      </div>
+                    </div>
+                    <div className="grid sm:grid-cols-2 gap-3">
+                      {talent.benefits.map((b) => (
+                        <div key={b} className="rounded-2xl bg-gradient-card border border-border p-5">
+                          <div className="flex items-start gap-3">
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-primary" />
+                            <p className="text-foreground/85 leading-relaxed text-[15px]">{b}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {talent.techStack && talent.techStack.length > 0 && (
+                  <div>
+                    <div className="flex items-center gap-3 mb-8">
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-highlight/10 text-highlight">
+                        <Cpu className="h-5 w-5" />
+                      </span>
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">06 — Tech stack</p>
+                        <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
+                          Tools of the <span className="text-gradient italic">trade</span>
+                        </h2>
+                      </div>
+                    </div>
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      {talent.techStack.map((group) => (
+                        <div key={group.category} className="rounded-2xl border border-border bg-card p-6">
+                          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-4">
+                            {group.category}
+                          </p>
+                          <div className="flex flex-wrap gap-2">
+                            {group.items.map((it) => (
+                              <span
+                                key={it}
+                                className="inline-flex items-center rounded-full border border-border bg-muted/40 px-3 py-1 text-sm font-medium text-foreground/85"
+                              >
+                                {it}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Right: sticky apply card */}
