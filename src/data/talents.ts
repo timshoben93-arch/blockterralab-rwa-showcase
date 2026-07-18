@@ -23,6 +23,11 @@ export type Talent = {
   overview: string;
   responsibilities: string[];
   qualifications: string[];
+  reportsTo?: string;
+  extraSections?: { heading: string; body: string }[];
+  niceToHave?: string[];
+  benefits?: string[];
+  techStack?: { category: string; items: string[] }[];
 };
 
 const PROJECT_CONTEXT =
@@ -64,21 +69,61 @@ export const TALENTS: Talent[] = [
     short: "Solidity / Smart Contract Dev",
     tagline: "Design and ship secure tokenization contracts for fractional real estate.",
     icon: Code2,
+    reportsTo: "Director, Engineering",
     overview:
-      "This is a technology platform focused on tokenizing real-world assets (RWA) — starting with real estate — by combining blockchain, AI, and data-driven insights. Our goal is to make real estate investment more transparent, efficient, and accessible through modern technology.\n\nWe are looking for an experienced Smart Contract & Web3 Developer to join our team. This role is central to the design, development, and deployment of secure and scalable blockchain-based solutions. You will work closely with frontend and backend developers, designers, and product managers to integrate smart contracts into a seamless and immersive user experience for real estate investment and trading.",
+      "At TokenBrickLabs, we are engineering the institutional standard for the digital asset industry. Our mission is to build a platform centered on security and compliance, requiring a commitment to technical excellence that extends beyond simply delivering code. As a global organization, we set a high bar for those driven to do their best work alongside world-class peers.\n\nWe value engineers who treat development as a craft and own the outcome from concept to deployment. We expect our teams to bring structure to ambiguity and shape the frameworks that support our global organization. We refuse to compromise on quality and seek problem solvers who thrive on high-impact technical challenges.",
+    extraSections: [
+      {
+        heading: "The Team: Clearing Engineering",
+        body: "The Clearing Engineering Team builds the mission-critical infrastructure. We mitigate systemic risk through automated default management and ensure operational integrity via high-precision data validation. Our proprietary netting algorithms drive capital efficiency and market velocity, reducing liquidity requirements while accelerated settlement cycles provide participants with faster access to funds. We solve complex distributed systems challenges on a modern cloud-native stack, rejecting \"good enough\" in favor of the engineering rigor required to operate within highly regulated jurisdictions.",
+      },
+    ],
     responsibilities: [
-      "Design, develop, and deploy secure smart contracts on Ethereum or compatible EVM chains (e.g., Polygon).",
-      "Build and test tokenization logic for real estate assets using NFTs and ERC standards (e.g., ERC-721, ERC-1155).",
-      "Collaborate with designers and frontend developers to enable blockchain-powered UX flows (e.g., wallet login, transactions).",
-      "Implement features such as fractional ownership, DAO voting, and rental agreements.",
-      "Manage smart contract deployments and monitor their on-chain performance.",
+      "Design and develop smart contracts using Solidity.",
+      "Build tokenization and asset management contracts for real-world assets.",
+      "Implement investor permissions, transfer restrictions, and compliance controls.",
+      "Integrate smart contracts with backend services and frontend applications.",
+      "Develop and maintain contract deployment scripts and tooling.",
+      "Write comprehensive unit and integration tests.",
+      "Conduct security reviews and participate in external audits.",
+      "Optimize contracts for gas efficiency and scalability.",
+      "Collaborate with the engineering team on blockchain architecture and roadmap planning.",
     ],
     qualifications: [
-      "3+ years of experience in smart contract development and blockchain technology.",
-      "Strong knowledge of Solidity and smart contract best practices.",
-      "Familiarity with Ethereum, Polygon, or other EVM-compatible chains.",
-      "Experience deploying contracts using tools like Hardhat or Foundry.",
-      "Understanding of decentralized storage solutions like IPFS.",
+      "3–5+ years of software development experience.",
+      "Strong proficiency in Solidity and Ethereum smart contract development.",
+      "Experience with ERC-20, ERC-721, and ERC-1155 standards.",
+      "Familiarity with permissioned token standards and compliance-focused tokenization models.",
+      "Experience with Hardhat, Foundry, or Truffle.",
+      "Strong understanding of smart contract security best practices.",
+      "Experience testing and deploying contracts on Ethereum-compatible networks.",
+      "Understanding of blockchain fundamentals, wallets, and transaction flows.",
+      "Strong debugging and problem-solving skills.",
+    ],
+    niceToHave: [
+      "Experience building RWA, DeFi, or tokenization platforms.",
+      "Knowledge of ERC-1400, ERC-3643, or other security token standards.",
+      "Experience with multisig wallets and treasury management.",
+      "Familiarity with Chainlink or oracle integrations.",
+      "Understanding of KYC/AML and compliance workflows.",
+      "Experience with audit preparation and remediation.",
+    ],
+    benefits: [
+      "Opportunity to work at the bleeding edge of Web3 / crypto / DeFi.",
+      "Flexible working conditions.",
+      "Remote work location.",
+      "Offer token/equity packages.",
+      "Sponsored global events and travel.",
+      "Annual global 2-week offsite.",
+      "Signing and performance bonuses.",
+      "Competitive remuneration (attractive salary, benefits, and incentives, including tokens and bonus opportunities).",
+    ],
+    techStack: [
+      { category: "Blockchain", items: ["Solidity", "Ethereum", "Polygon", "Arbitrum"] },
+      { category: "Smart Contract Development", items: ["Hardhat", "Foundry", "OpenZeppelin", "Ethers.js"] },
+      { category: "Backend Integration", items: ["Node.js", "TypeScript", "REST APIs"] },
+      { category: "Infrastructure", items: ["AWS", "Docker", "GitHub Actions"] },
+      { category: "Database", items: ["PostgreSQL", "Redis"] },
     ],
   },
   {
