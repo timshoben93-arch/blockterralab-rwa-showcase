@@ -166,7 +166,7 @@ const TalentPage = () => {
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">02 — Responsibilities</p>
                       <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
-                        What you'll <span className="text-gradient italic">own</span>
+                        Primary <span className="text-gradient italic">Responsibilities</span>
                       </h2>
                     </div>
                   </div>
