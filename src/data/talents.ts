@@ -69,7 +69,6 @@ export const TALENTS: Talent[] = [
     short: "Solidity / Smart Contract Dev",
     tagline: "Design and ship secure tokenization contracts for fractional real estate.",
     icon: Code2,
-    reportsTo: "Director, Engineering",
     overview:
       "At TokenBrickLabs, we are engineering the institutional standard for the digital asset industry. Our mission is to build a platform centered on security and compliance, requiring a commitment to technical excellence that extends beyond simply delivering code. As a global organization, we set a high bar for those driven to do their best work alongside world-class peers.\n\nWe value engineers who treat development as a craft and own the outcome from concept to deployment. We expect our teams to bring structure to ambiguity and shape the frameworks that support our global organization. We refuse to compromise on quality and seek problem solvers who thrive on high-impact technical challenges.",
     extraSections: [
