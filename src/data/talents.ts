@@ -65,16 +65,24 @@ export const TALENTS: Talent[] = [
   },
   {
     slug: "solidity-smart-contract-developer",
-    title: "Solidity / Smart Contract Developer",
-    short: "Solidity / Smart Contract Dev",
-    tagline: "Design and ship secure tokenization contracts for fractional real estate.",
+    title: "Blockchain Developer (Smart Contracts)",
+    short: "Blockchain Developer (Smart Contracts)",
+    tagline: "New York, London, Hong Kong (Remote / Hybrid) — Full-time / Part-time",
     icon: Code2,
     overview:
-      "At TokenBrickLabs, we are engineering the institutional standard for the digital asset industry. Our mission is to build a platform centered on security and compliance, requiring a commitment to technical excellence that extends beyond simply delivering code. As a global organization, we set a high bar for those driven to do their best work alongside world-class peers.\n\nWe value engineers who treat development as a craft and own the outcome from concept to deployment. We expect our teams to bring structure to ambiguity and shape the frameworks that support our global organization. We refuse to compromise on quality and seek problem solvers who thrive on high-impact technical challenges.",
+      "TokenBrickLabs is an institutionally focused global digital asset platform that provides market infrastructure and information services. These include: TokenBrickLabs Exchange – a regulated and institutionally focused digital assets spot and derivatives exchange, integrating a high-performance central limit order book matching engine with automated market making to provide deep and predictable liquidity. TokenBrickLabs Exchange is regulated in Germany, Hong Kong, and Gibraltar. TokenBrickLabs Indices – a collection of tradable proprietary and single-asset benchmarks and indices that track the performance of digital assets for global institutions in the digital assets and traditional finance industries. TokenBrickLabs Data – a broad suite of digital assets market data and analytics, providing real-time insights into prices, trends, and market dynamics. TokenBrickLabs Insights – a digital asset media and events provider covering news and insights about digital assets, the underlying markets, policy, and blockchain technology.",
     extraSections: [
       {
         heading: "Reports to:",
-        body: "Director, Engineering\n\nEngineering Organization & Culture\n\nAt Bullish, we are engineering the institutional standard for the digital asset industry. Our mission is to build a platform centered on security and compliance, requiring a commitment to technical excellence that extends beyond simply delivering code. As a global organization, we set a high bar for those driven to do their best work alongside world-class peers.\n\nWe value engineers who treat development as a craft and own the outcome from concept to deployment. We expect our teams to bring structure to ambiguity and shape the frameworks that support our global organization. We refuse to compromise on quality and seek problem solvers who thrive on high-impact technical challenges.\n\nThe Team: Clearing Engineering\n\nThe Clearing Engineering Team builds the mission-critical infrastructure for Bullish Clearing. We mitigate systemic risk through automated default management and ensure operational integrity via high-precision data validation. Our proprietary netting algorithms drive capital efficiency and market velocity, reducing liquidity requirements while accelerated settlement cycles provide participants with faster access to funds. We solve complex distributed systems challenges on a modern cloud-native stack, rejecting \"good enough\" in favor of the engineering rigor required to operate within highly regulated jurisdictions.",
+        body: "Director, Engineering",
+      },
+      {
+        heading: "Engineering Organization & Culture",
+        body: "At TokenBrickLabs, we are engineering the institutional standard for the digital asset industry. Our mission is to build a platform centered on security and compliance, requiring a commitment to technical excellence that extends beyond simply delivering code. As a global organization, we set a high bar for those driven to do their best work alongside world-class peers.\n\nWe value engineers who treat development as a craft and own the outcome from concept to deployment. We expect our teams to bring structure to ambiguity and shape the frameworks that support our global organization. We refuse to compromise on quality and seek problem solvers who thrive on high-impact technical challenges.",
+      },
+      {
+        heading: "The Team: Clearing Engineering",
+        body: "The Clearing Engineering Team builds the mission-critical infrastructure for TokenBrickLabs Clearing. We mitigate systemic risk through automated default management and ensure operational integrity via high-precision data validation. Our proprietary netting algorithms drive capital efficiency and market velocity, reducing liquidity requirements while accelerated settlement cycles provide participants with faster access to funds. We solve complex distributed systems challenges on a modern cloud-native stack, rejecting \"good enough\" in favor of the engineering rigor required to operate within highly regulated jurisdictions.",
       },
     ],
     responsibilities: [
