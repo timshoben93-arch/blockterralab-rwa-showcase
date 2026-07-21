@@ -357,7 +357,7 @@ const TalentPage = () => {
                 </h2>
               </div>
               <Link
-                to="/"
+                to="/talents"
                 className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-2.5 text-sm font-medium hover:border-primary/40 hover:shadow-soft transition-all"
               >
                 View all positions
