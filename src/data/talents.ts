@@ -67,7 +67,7 @@ export const TALENTS: Talent[] = [
     slug: "solidity-smart-contract-developer",
     title: "Blockchain Developer (Smart Contracts)",
     short: "Blockchain Developer (Smart Contracts)",
-    tagline: "New York, London, Hong Kong (Remote / Hybrid) — Full-time / Part-time",
+    tagline: "",
     icon: Code2,
     overview:
       "TokenBrickLabs is an institutionally focused global digital asset platform that provides market infrastructure and information services. These include: TokenBrickLabs Exchange – a regulated and institutionally focused digital assets spot and derivatives exchange, integrating a high-performance central limit order book matching engine with automated market making to provide deep and predictable liquidity. TokenBrickLabs Exchange is regulated in Germany, Hong Kong, and Gibraltar. TokenBrickLabs Indices – a collection of tradable proprietary and single-asset benchmarks and indices that track the performance of digital assets for global institutions in the digital assets and traditional finance industries. TokenBrickLabs Data – a broad suite of digital assets market data and analytics, providing real-time insights into prices, trends, and market dynamics. TokenBrickLabs Insights – a digital asset media and events provider covering news and insights about digital assets, the underlying markets, policy, and blockchain technology.",
