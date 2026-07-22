@@ -185,36 +185,43 @@ const ApplyPage = () => {
                 <div className="space-y-2">
                   <Label htmlFor="firstName">First name</Label>
                   <Input id="firstName" name="firstName" required maxLength={80} placeholder="Ada" />
+                  {errors.firstName && <p className="text-xs text-destructive">{errors.firstName}</p>}
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="lastName">Last name</Label>
                   <Input id="lastName" name="lastName" required maxLength={80} placeholder="Lovelace" />
+                  {errors.lastName && <p className="text-xs text-destructive">{errors.lastName}</p>}
                 </div>
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
                 <Input id="email" name="email" type="email" required maxLength={255} placeholder="you@example.com" />
+                {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="contact">WhatsApp / Telegram / Discord</Label>
                 <Input id="contact" name="contact" required maxLength={150} placeholder="@telegram_handle or +1 555 0100" />
+                {errors.contact && <p className="text-xs text-destructive">{errors.contact}</p>}
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="location">Where do you live (country, city)?</Label>
                 <Input id="location" name="location" required maxLength={150} placeholder="USA, Seattle" />
+                {errors.location && <p className="text-xs text-destructive">{errors.location}</p>}
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="social">LinkedIn or X profile</Label>
                 <Input id="social" name="social" required maxLength={255} placeholder="https://linkedin.com/in/yourname" />
+                {errors.social && <p className="text-xs text-destructive">{errors.social}</p>}
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="experience">Experience (years)</Label>
                 <Input id="experience" name="experience" type="number" min={0} max={60} step={1} required placeholder="5" />
+                {errors.experience && <p className="text-xs text-destructive">{errors.experience}</p>}
               </div>
 
               <div className="space-y-2">
@@ -247,6 +254,7 @@ const ApplyPage = () => {
                   className="sr-only"
                   onChange={(e) => setResume(e.target.files?.[0] ?? null)}
                 />
+                {errors.resume && <p className="text-xs text-destructive">{errors.resume}</p>}
               </div>
 
               <div className="pt-2">
