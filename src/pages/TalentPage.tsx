@@ -59,7 +59,7 @@ const TalentPage = () => {
                 </span>
               </div>
 
-              <h1 className="mt-8 font-display font-bold tracking-[-0.03em] text-4xl md:text-5xl lg:text-6xl leading-[1.05] md:whitespace-nowrap">
+              <h1 className="mt-8 font-display font-bold tracking-[-0.03em] text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] lg:whitespace-nowrap break-words">
                 <span className="text-foreground/90">{talent.title}</span>
               </h1>
 
