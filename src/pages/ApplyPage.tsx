@@ -257,8 +257,8 @@ const ApplyPage = () => {
                 {errors.resume && <p className="text-xs text-destructive">{errors.resume}</p>}
               </div>
 
-              <div className="pt-2">
-                <Button type="submit" variant="hero" size="xl" disabled={submitting} className="w-full sm:w-auto">
+              <div className="pt-1 sm:pt-2">
+                <Button type="submit" variant="hero" size="xl" disabled={submitting} className="w-full sm:w-auto min-h-[3.25rem]">
                   {submitting ? "Submitting..." : "Submit application"}
                 </Button>
               </div>
