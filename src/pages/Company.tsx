@@ -26,7 +26,7 @@ const Company = () => {
         <section className="bg-hero-radial border-b border-border/60">
           <div className="container py-24 lg:py-32 max-w-5xl">
             <Eyebrow>About · TokenBrickLabs</Eyebrow>
-            <h1 className="mt-6 font-display text-5xl md:text-6xl lg:text-7xl font-bold tracking-[-0.03em] leading-[1.05]">
+            <h1 className="mt-6 font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-[-0.03em] leading-[1.05]">
               The team building the
               <br className="hidden md:block" />{" "}
               <span className="text-gradient">on-chain real economy</span>
@@ -60,7 +60,7 @@ const Company = () => {
           <div className="container py-24 lg:py-28">
             <div className="max-w-2xl">
               <Eyebrow>Headquarters</Eyebrow>
-              <h2 className="mt-5 font-display text-4xl md:text-5xl font-bold tracking-[-0.02em] leading-[1.1]">
+              <h2 className="mt-5 font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-[-0.02em] leading-[1.1]">
                 Find us in <span className="text-gradient">Seattle</span>
               </h2>
               <p className="mt-5 text-base md:text-lg leading-relaxed text-muted-foreground">

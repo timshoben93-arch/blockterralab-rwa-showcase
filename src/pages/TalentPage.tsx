@@ -307,7 +307,7 @@ const TalentPage = () => {
             <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">More opportunities</p>
-                <h2 className="mt-3 font-display text-3xl md:text-5xl font-bold tracking-tight">
+                <h2 className="mt-3 font-display text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight">
                   Other open <span className="text-gradient italic">roles</span>
                 </h2>
               </div>

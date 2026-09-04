@@ -20,8 +20,8 @@ export const Process = () => {
 
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-surface-dark-foreground/10 rounded-3xl overflow-hidden border border-surface-dark-foreground/10">
           {steps.map((s) => (
-            <div key={s.n} className="bg-surface-dark p-8">
-              <div className="font-display text-5xl font-bold text-gradient">{s.n}</div>
+            <div key={s.n} className="bg-surface-dark p-6 sm:p-8">
+              <div className="font-display text-4xl sm:text-5xl font-bold text-gradient">{s.n}</div>
               <h3 className="mt-6 font-display text-xl font-semibold">{s.t}</h3>
               <p className="mt-2 text-sm text-surface-dark-foreground/70 leading-relaxed">{s.d}</p>
             </div>
