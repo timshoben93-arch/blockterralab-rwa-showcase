@@ -69,8 +69,8 @@ const Company = () => {
               </p>
             </div>
 
-            <div className="mt-12 grid lg:grid-cols-3 gap-6 items-stretch">
-              <Card className="p-8 lg:col-span-1 bg-card border-border/70 shadow-soft">
+            <div className="mt-12 grid lg:grid-cols-3 gap-6 items-stretch min-w-0">
+              <Card className="p-6 sm:p-8 min-w-0 break-words lg:col-span-1 bg-card border-border/70 shadow-soft">
                 <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
                   Visit · Contact
                 </div>
@@ -111,7 +111,7 @@ const Company = () => {
                 </ul>
               </Card>
 
-              <div className="lg:col-span-2 rounded-2xl overflow-hidden border border-border/70 shadow-soft min-h-[460px] bg-card">
+              <div className="lg:col-span-2 min-w-0 rounded-2xl overflow-hidden border border-border/70 shadow-soft min-h-[460px] bg-card">
                 <iframe
                   title="TokenBrickLabs HQ map"
                   src={mapSrc}
