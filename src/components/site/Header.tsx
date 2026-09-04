@@ -1,21 +1,24 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { useState } from "react";
 import logo from "@/assets/logo.png";
 
 const Logo = () => (
-  <Link to="/" className="flex items-center gap-2.5 group">
+  <Link to="/" className="flex items-center gap-2.5 group min-w-0">
     <img
       src={logo}
       alt="TokenBrickLabs logo"
-      className="h-10 w-10 rounded-xl shadow-soft object-contain"
+      className="h-9 w-9 sm:h-10 sm:w-10 rounded-xl shadow-soft object-contain shrink-0"
     />
-    <div className="leading-tight">
-      <div className="font-display font-bold tracking-tight text-foreground">TokenBrickLabs</div>
-      <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">RWA · Blockchain Lab</div>
+    <div className="leading-tight min-w-0">
+      <div className="font-display font-bold tracking-tight text-foreground text-sm sm:text-base truncate">TokenBrickLabs</div>
+      <div className="hidden sm:block text-[10px] uppercase tracking-[0.18em] text-muted-foreground">RWA · Blockchain Lab</div>
     </div>
   </Link>
 );
+
 
 const NAV = [
   { label: "RWA", href: "/#rwa" },
